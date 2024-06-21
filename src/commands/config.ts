@@ -31,7 +31,7 @@ export async function execute(i: ChatInputCommandInteraction<CacheType>) {
 
         // ? Database
         // ? Even if the DB exists, it will overwrite all current settings.
-        await settingsCreate(i.guild?.id as string, { channelId: channel.id, roleId: role.id, ping: ping == true ? ping : false}, false).catch((err) => {
+        await settingsCreate(i.guild?.id as string, { channelId: channel.id, roleId: role.id, ping: ping == true ? ping : false}, true).catch((err) => {
                 i.reply("There was an error.");
                 throw new err;
         });
