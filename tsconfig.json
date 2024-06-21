@@ -1,0 +1,42 @@
+{
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"target": "ES2020",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"lib": [
+			"ES2020",
+			"ES2017",
+			"DOM"
+		],
+
+		"rootDir": "src",
+		"outDir": "build",
+
+		"strict": true,
+		"alwaysStrict": true,
+		"strictFunctionTypes": true,
+		"strictNullChecks": true,
+		"strictPropertyInitialization": true,
+
+		"forceConsistentCasingInFileNames": true,
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"downlevelIteration": true,
+		"declaration": true,
+
+		"pretty": true,
+	},
+	"include": [
+		"typings/**/*",
+		"src/**/*",
+		"src/commands/config.ts"
+	]
+}

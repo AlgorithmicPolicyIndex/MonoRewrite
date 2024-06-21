@@ -1,0 +1,33 @@
+{
+  "name": "monorewrite",
+  "module": "module",
+  "dependencies": {
+    "@types/node": "^20.14.2",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/parser": "^7.13.0",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "eslint": "^9.5.0",
+    "node-json-db": "^2.3.0",
+    "sharp": "^0.33.4",
+    "typescript": "^5.4.5",
+    "vega": "^5.30.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "bun run src/index.ts",
+    "dev:deploy:guild:create": "bun run src/deploy/deploy-guild.ts create",
+    "dev:deploy:guild:delete": "bun run src/deploy/deploy-guild.ts delete",
+    "dev:deploy:global:create": "bun run src/deploy/deploy-global.ts create",
+    "dev:deploy:global:delete": "bun run src/deploy/deploy-global.ts delete",
+    "publish": "bun run build && bun run build/index.js",
+    "publish:deploy:guild:create": "bun run build && bun run build/deploy/deploy-guild.js create",
+    "publish:deploy:guild:delete": "bun run build && bun run build/deploy/deploy-guild.js delete",
+    "publish:deploy:global:create": "bun run build && bun run build/deploy/deploy-global.js create",
+    "publish:deploy:global:delete": "bun run build && bun run build/deploy/deploy-global.js delete"
+  },
+  "type": "module"
+}
